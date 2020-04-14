@@ -189,7 +189,7 @@
       <link href="/posts/56421c6a/"/>
       <url>/posts/56421c6a/</url>
       
-        <content type="html"><![CDATA[<blockquote><p>没有测量，就没有科学。</p></blockquote><h1 id="评估指标"><a class="markdownIt-Anchor" href="#评估指标"></a> 评估指标</h1>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>没有测量，就没有科学。</p><p>只有选择与问题相匹配的评估方法，才能快速地发现模型选择或训练过程中出现的问题，迭代地对模型进行优化。</p></blockquote><h2 id="评估指标的局限性"><a class="markdownIt-Anchor" href="#评估指标的局限性"></a> 评估指标的局限性</h2><p>在诸多评估指标中，大部分指标只能片面反映模型的一部分性能。如果不能合理的运用评估指标，不仅不利于发现模型本身的问题，甚至可能得出错误的结论。</p>]]></content>
       
       
       <categories>

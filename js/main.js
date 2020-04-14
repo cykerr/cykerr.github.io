@@ -647,7 +647,7 @@ $(function () {
       if (copyFont.length > 45) {
         textFont = copyFont + '\n' + '\n' + '\n' +
           copyright.languages.author + '\n' +
-          copyright.languages.link + '\n' +
+          copyright.languages.link + window.location.href + '\n' +
           copyright.languages.source + '\n' +
           copyright.languages.info
       } else {
