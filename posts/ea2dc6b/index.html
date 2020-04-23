@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>人的生活方式有两种 | Cyker</title><meta name="description" content="人的生活方式有两种"><meta name="keywords" content="人生感悟"><meta name="author" content="Cyker,top_cyker@qq.com"><meta name="copyright" content="Cyker"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="twitter:card" content="summary"><meta name="twitter:title" content="人的生活方式有两种"><meta name="twitter:description" content="人的生活方式有两种"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/cykerr/CDN/blog/img/20200402234808.png"><meta property="og:type" content="article"><meta property="og:title" content="人的生活方式有两种"><meta property="og:url" content="https://cyker.top/posts/ea2dc6b/"><meta property="og:site_name" content="Cyker"><meta property="og:description" content="人的生活方式有两种"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/cykerr/CDN/blog/img/20200402234808.png"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme")
+if (autoChangeMode == '1'){
+  const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+  const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+  const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+  const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined){
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport){
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      now = new Date();
+      hour = now.getHours();
+      isNight = hour < 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+  }
+  } else if (t == 'light') activateLightMode()
+  else activateDarkMode()
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="canonical" href="https://cyker.top/posts/ea2dc6b/"><link rel="prev" title="你不够优秀，因为你不够孤独" href="https://cyker.top/posts/ab5e98c4/"><link rel="next" title="模型评估" href="https://cyker.top/posts/56421c6a/"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://cyker.top/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: {"languages":{"author":"作者: Cyker","link":"链接: ","source":"来源: Cyker","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  ClickShowText: {"text":"富强,民主,文明,和谐,自由,平等,公正,法治,爱国,敬业,诚信,友善","fontSize":"15px"},
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: {"bookmark":{"title":"Snackbar.bookmark.title","message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#2d3035","position":"top-center"},
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  highlightShrink: 'false',
+  isFontAwesomeV5: false
+  
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false
+}</script><meta name="generator" content="Hexo 4.2.0"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">11</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">16</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">6</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 提升</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/check/"><i class="fa-fw fa fa-check-square"></i><span> 打卡</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw fa fa-book"></i><span> 阅读</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fa fa-commenting"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div></div></div><i class="fa fa-arrow-right on" id="toggle-sidebar" aria-hidden="true">     </i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#节选自俞洪敏励志演讲"><span class="toc-number">1.</span> <span class="toc-text"> 节选自俞洪敏励志演讲</span></a></li></ol></div></div></div><div id="body-wrap"><div class="post-bg" id="nav" style="background-image: url(https://cdn.jsdelivr.net/gh/cykerr/CDN/blog/img/20200402234808.png)"><div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Cyker</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 提升</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/check/"><i class="fa-fw fa fa-check-square"></i><span> 打卡</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw fa fa-book"></i><span> 阅读</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/message/"><i class="fa-fw fa fa-commenting"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div></span><span class="pull_right" id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title"><div class="posttitle">人的生活方式有两种</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2020-03-29<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> 更新于 2020-04-14</time><span class="post-meta__separator">|</span><span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E6%9D%82%E6%96%87%E6%94%B6%E5%BD%95/">杂文收录</a></span><div class="post-meta-wordcount"><i class="post-meta__icon fa fa-file-word-o" aria-hidden="true"></i><span>字数总计:</span><span class="word-count">2.5k</span><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-clock-o" aria-hidden="true"></i><span>阅读时长: 7 分钟</span><div class="post-meta-pv-cv"><span class="post-meta__separator">|</span><i class="fa fa-eye post-meta__icon" aria-hidden="true"> </i><span>阅读量:</span><span id="busuanzi_value_page_pv"></span><span class="post-meta__separator">|</span><i class="post-meta__icon fa fa-comment-o" aria-hidden="true"></i><span>评论数:</span><a href="/posts/ea2dc6b/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/posts/ea2dc6b/" itemprop="commentCount"></span></a></div></div></div></div></div><main class="layout_post" id="content-inner"><article id="post"><div id="article-container"><h1 id="节选自俞洪敏励志演讲"><a class="markdownIt-Anchor" href="#节选自俞洪敏励志演讲"></a> 节选自俞洪敏励志演讲</h1>
+<p>人的生活方式有两种，第一种是像草一样活着。你尽管活着，每年还在成长，但是你毕竟是一颗草；你吸收雨露阳光，但是长不大。人们可以踩过你，人们不会因为你的痛苦而产生痛苦；人们不会因为你被踩了，而来怜悯你，因为人们本身就没看到你。所以，我们每一个人都应该像树一样成长。即使我们现在什么都不是，但是只要你有树的种子，即使被人踩到泥土中间，你依然能够吸收泥土的养分，自己成长起来。也许两年、三年你长不大，但是十年、八年、二十年，你一定能长成参天大树，当你长成参天大树以后，遥远的地方，人们就能看到你；走近你，你能给人一片绿色、一片阴凉，你能帮助别人。即使人们离开你以后，回头一看，你依然是地平线上一道美丽的风景线。树，活着是美丽的风景，死了依然是栋梁之才。活着死了都有用，这就是我们每一个同学做人的标准和成长的标准。</p>
+<p>当一个人为别人活着的时候，就非常麻烦。因为别人的标准是不一样的，没有坚持了自己的追求而想要的东西，你的尊严和自尊是得不到保证的，因为你总是在飘摇中间。对于我们来说，保持自己尊严和自尊的最好的方法是什么呢？就是说你有一个梦想，通过从最基本的一个步骤，你就可以开始追求。比如说最后你想取代我，成为新东方的董事长和总裁，你能不能做到？只要你有足够的心态和足够做事情的方法，以及胸怀，肯定是能做到的。</p>
+<p>凡是想要一下子把一件事情干成的人，就算他干成这件事情，他也没有基础，因为等于是在沙滩上造的房子，最后一定会倒塌。只有慢慢地一步一步把事情干成的，每一步都给自己打下坚实的基础，每一步都给自己一个良好的交代，再重新向未来更高去走每一步的人，他才能够把事情真正地做成功。</p>
+<p>当你决定了一辈子干什么以后，你就要坚定不移地干下去，就不要随便地换。你可以像一条河流一样，越流越宽阔，但是千万不要再想去变成另外一条河，或者变成一座高山。有了这样一个目标以后，你生命就不会摇晃，不会因为有某种机会，你就到处乱窜，这样你才能够做出事情。</p>
+<p>我们未来生活的一种重要能力，叫做忍辱负重的能力。很多社会名流会遇到很多很多你不能忍受的事情，但是你不得不忍受。而你不忍受就不可能成功。为什么，因为你不忍辱负重，你就没有时间，你就没有空间，没有走向未来的空间。如果你想走向未来，最后变得更加强大、更加繁荣，你就必须要做好给自己留下足够的时间和空间。轮到我们自己的生命，要想为一个伟大的目标而奋斗的时候，你排除也得必须排除，你生命中一切琐碎的干扰，因此你就必须忍辱负重。</p>
+<p>不管我们是什么年龄，我们哪能做一时气不过的事情。这个世界上让你气不过的事情太多了，只有你气得过的时候，这个世界才在你面前才能展开最光辉的一面。</p>
+<p>我有这么一个比喻，每一条河流都有自己不同的生命曲线。长江和黄河的曲线，是绝对不一样的。但是每一条河流都有自己的梦想，那就是奔向大海。所以不管黄河是多么的曲折，绕过了多少的障碍；长江拐的弯不如黄河多，但是她冲破了悬崖峭壁，用的方式是不一样的，但是最后都走到了大海。当我们遇到困难时，不管是冲过去还是绕过去，只要我们能过去就行。我希望大家能使自己的生命向梦想流过去，像长江、黄河一样流到自己梦想的尽头，进入宽阔的海洋，使自己的生命变得开阔，使自己的事业变得开阔。但是并不是你想流就能流过去，其实这里面就具备了一种精神，毫无疑问就是水的精神。我们的生命有时候会是泥沙，尽管你也跟着水一起往前流，但是由于你个性的缺陷，面对困难的退步或者说胆怯，你可能慢慢地就会像泥沙一样沉淀下去，一旦你沉淀下去，也许你不用为前进而努力了，但是你却永远见不得阳光了。你沉淀了下去，上面的泥沙就会不断地把你压住，最后你会暗无天日。所以我建议大家，不管你现在的生命是什么样的，一定要有水的精神。哪怕被污染了，也能洗净自己。像水一样，不断地积蓄自己的力量，不断地冲破障碍，当你发现时机不到的时候，把自己的厚度给积累起来，当有一天时机来临的时候，你就能够奔腾入海，成就自己的生命。</p>
+<p>渡过难关是一种心态，你想要跨过去的话，就必然能跨过去。</p>
+<p>很多人在工作的时候，带着怨气和怨恨在工作，你的工作就远做不好。</p>
+<p>如何能够把事情做得更成功的几个要点。第一要点，如何尽可能把自己的长期目标和短期目标结合起来。我们要先分清楚，哪些事情是我们想一辈子干的事情，哪些事情是一下子干完，我们就可以不用干的事情。中国有句话叫急事慢做，你越着急的事情，你做的越仔细、越认真，越能把事情做好。而你越着急的事情，做的越快反而越做的七零八落，我把这个急事也叫做大事。第二个要素就是要决定自己一辈子干什么。那么还有一个我觉得非常重要的，就是平时做事情的时候，对时间的计划性。还有一点，就是成功要自我约束。任何时候，当你前面面临一个巨大的诱惑，和其它任何可能产生诱惑的时候，如果你觉得自己停不下来，你千万别去追那个东西。因为你追了那个东西停不下来，最后栽跟头的一定就是你。</p>
+<p>千万记住一点，做任何事情的时间都是能挤出来的。</p>
+<p>伟大与平凡的不同之处，一个平凡的人每天过着琐碎的生活，但是他把琐碎堆砌出来，还是一堆琐碎的生命。所谓伟大的人，是把一堆琐碎的事情，通过一个伟大的目标，每天积累起来以后，变成一个伟大的事业。</p>
+<p>我的核心价值观就是，以善为生，用善良的心态来对待自己的生命和别人的生命。</p>
+<p>有两句话我是比较欣赏的。生命是一种过程；事业一种结果。</p>
+<p>我们每一个人是活在每一天的，假如说你每一天不高兴，你把所有的每一天都组合起来，就是你一辈子不高兴。但是假如你每一天都高兴了，其实你一辈子就是幸福快乐的。有一次我在往黄河边上走的时候，我就用矿泉水瓶灌了一瓶水。大家知道黄河水特别的浑，后来我就放在路边，大概有一个小时左右。让我非常吃惊的发现，四分之三已经变成了非常清澈的一瓶水，而只有四分之一呢，是沉淀下来的泥沙。假如说我们把这瓶水，清水部分比喻我们的幸福和快乐，而把那个浑浊的那个沉淀的泥沙，比喻我们痛苦的话，你就明白了；当你摇晃一下以后，你的生命中整个充满的是浑浊，也就是充满的都是痛苦和烦恼。但是当你把心静下来的以后，尽管泥沙总的份量一点都没有减少，但是它沉淀在你的心中，因为你的心比较沉静，所以就再也不会被搅和起来，因此你的生命的四分之三，就一定是幸福和快乐的。</p>
+<p>人的生命道路其实很不平坦，靠你一个人是绝对走不完的，这个世界上只有你跟别人在一起，为了同一个目标一起做事情的时候，才能把这件事情做成。一个人的力量很有限，但是一群人的力量是无限的。当五个手指头伸出来的时候，它是五个手指头，但是当你把五个手指头握起来的时候，它是一个拳头。未来除了是你自己成功，一定要跟别人一起成功，跟别人团结在一起，形成我们，你才能把事情做成功。</p>
+</div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%BA%BA%E7%94%9F%E6%84%9F%E6%82%9F/">人生感悟    </a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/cykerr/CDN/blog/img/20200402231812.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.jpg" alt="微信"/><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/alipay.jpg" alt="支付宝"/><div class="post-qr-code__desc">支付宝</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/posts/ab5e98c4/"><img class="prev_cover lazyload" data-src="https://cdn.jsdelivr.net/gh/cykerr/CDN/blog/img/20200402231827.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">你不够优秀，因为你不够孤独</div></div></a></div><div class="next-post pull_right"><a href="/posts/56421c6a/"><img class="next_cover lazyload" data-src="https://cdn.jsdelivr.net/gh/cykerr/CDN/blog/img/20200402231812.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">模型评估</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/posts/ab5e98c4/" title="你不够优秀，因为你不够孤独"><img class="relatedPosts_cover lazyload"data-src="https://cdn.jsdelivr.net/gh/cykerr/CDN/blog/img/20200402231827.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-03-29</div><div class="relatedPosts_title">你不够优秀，因为你不够孤独</div></div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+window.valine = new Valine({
+  el:'#vcomment',
+  notify: false,
+  verify: true,
+  appId: 'vhnY326lFA9QVRM1eVXxfBCX-gzGzoHsz',
+  appKey: 'z2zXxx65nDDgSGSIdfLXbiBl',
+  placeholder: '客官有何指教...',
+  avatar: 'monsterid',
+  meta: guest_info,
+  pageSize: '10',
+  lang: 'zh-cn',
+  recordIP: true,
+  serverURLs: ''
+});</script></div></article></main><footer id="footer" style="background-image: url(https://cdn.jsdelivr.net/gh/cykerr/CDN/blog/img/20200402234808.png)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2020 By Cyker</div><div class="framework-info"><span>驱动 </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script id="ribbon_piao" mobile="false" src="/js/third-party/piao.js"></script><script id="canvas_nest" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="/js/third-party/canvas-nest.js"></script><script src="/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><script src="/js/third-party/ClickShowText.js"></script><script src="https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js"></script><script>document.addEventListener('DOMContentLoaded', function() {
+      pangu.spacingElementById('content-inner')
+})</script><script src="/js/search/local-search.js"></script></body></html>
