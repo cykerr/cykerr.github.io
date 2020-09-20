@@ -483,9 +483,9 @@
       
         <tags>
             
-            <tag> 读书笔记 </tag>
-            
             <tag> 模型评估 </tag>
+            
+            <tag> 读书笔记 </tag>
             
         </tags>
       
@@ -512,6 +512,8 @@
       
         <tags>
             
+            <tag> 读书笔记 </tag>
+            
             <tag> 特征工程 </tag>
             
             <tag> PLSA </tag>
@@ -521,8 +523,6 @@
             <tag> N-gram </tag>
             
             <tag> word2vec </tag>
-            
-            <tag> 读书笔记 </tag>
             
         </tags>
       
