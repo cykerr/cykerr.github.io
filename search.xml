@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>腾讯广告算法大赛 2020</title>
+      <link href="/posts/d9e481a1/"/>
+      <url>/posts/d9e481a1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="背景"><a class="markdownIt-Anchor" href="#背景"></a> 背景</h2><p>本届算法大赛的题目“广告受众基础属性预估”兼具实用性和趣味性，从广告行业的经典假设出发，逆向验证这一命题的科学性。</p><p>题目来源于一个重要且有趣的问题：</p><p>人口统计学特征是各类推荐系统的重要输入特征，其中自然也包括了广告平台。大多数验证所采用的方式都是以人口统计学属性作为输入来产生推荐结果，然后离线或者在线地对比用与不用这些输入的情况下的推荐性能。本届大赛的题目尝试从另一个方向来验证这个假设，即以用户在广告系统中的交互行为作为输入来预测用户的人口统计学属性。</p><p>我们认为这一赛题的“逆向思考”本身具有其研究价值和趣味性，此外也有实用价值和挑战性。例如，对于缺乏用户信息的实践者来说，基于其自有系统的数据来推断用户属性，可以帮助其在更广的人群上实现智能定向或者受众保护。与此同时，参赛者需要综合运用机器学习领域的各种技术来实现更准确的预估。（所有数据均为脱敏处理后的数据。）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 人工智能 </category>
+          
+          <category> 比赛 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> TAAC2020 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ACM（一）模拟与暴力</title>
+      <link href="/posts/86559b5e/"/>
+      <url>/posts/86559b5e/</url>
+      
+        <content type="html"><![CDATA[<h2 id="模拟"><a class="markdownIt-Anchor" href="#模拟"></a> 模拟</h2><h3 id="约瑟夫环问题"><a class="markdownIt-Anchor" href="#约瑟夫环问题"></a> 约瑟夫环问题</h3><blockquote><p>已知n个人（编号1、2、3…n）围坐在一张圆桌周围。从编号为1的人开始报数，数到m的那个人出列；他的下一个人又从1开始报数，数到m的那个人又出列；依此规律重复下去，直到圆桌周围的人全部出列。输出出列顺序和最后剩下的人。</p></blockquote><p>（1）循环链表求解</p><p>（2）数组求解 (p+m-1) % n</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">joseph_with_arr</span><span class="params">(n, m)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    【解法1】用数组模拟约瑟夫环求解</span></span><br><span class="line"><span class="string">    :param n: 总人数</span></span><br><span class="line"><span class="string">    :param m: 第 m 个人</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    a = [i + <span class="number">1</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(n)]  <span class="comment"># 初始化数组</span></span><br><span class="line">    k = <span class="number">0</span>  <span class="comment"># 初始化出圈人数</span></span><br><span class="line">    p = <span class="number">0</span>  <span class="comment"># 初始化出圈人的下标</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> n &gt; <span class="number">1</span>:</span><br><span class="line">        <span class="comment"># 计算并打印出圈人</span></span><br><span class="line">        p = (p + m - <span class="number">1</span>) % n  <span class="comment"># 求出圈人下标</span></span><br><span class="line">        k = k + <span class="number">1</span></span><br><span class="line">        print(<span class="string">"第"</span>, k, <span class="string">"个出圈的是："</span>, a[p])</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 出圈人后面的数向前移一步</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(p + <span class="number">1</span>, n):</span><br><span class="line">            a[i - <span class="number">1</span>] = a[i]</span><br><span class="line">        n = n - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 走到终点则从0开始</span></span><br><span class="line">        <span class="keyword">if</span> p == n:</span><br><span class="line">            p = <span class="number">0</span></span><br><span class="line">    print(<span class="string">"最后剩下的是："</span>, a[p])</span><br></pre></td></tr></table></figure><h3 id="false-coin"><a class="markdownIt-Anchor" href="#false-coin"></a> False Coin</h3><blockquote><p>给你n个硬币（编号1～n），k组称量结果（第一行两个数字表示）。在这n个硬币中有一个是假的，它的重量跟其他的不一样（不知道大小），真硬币的重量都相同。从第二行开始，每组第一个数字代表左右放置硬币的数量，接着是硬币的编号，最后面的符号则是称量结果。问能不能确定哪个是假币，如果不能输出0。</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 样例输入</span><br><span class="line">5 3</span><br><span class="line">2 1 2 3 4 &lt;</span><br><span class="line">1 1 4 &#x3D;</span><br><span class="line">1 2 5 &#x3D;</span><br><span class="line"></span><br><span class="line"># 样例输出</span><br><span class="line">3</span><br></pre></td></tr></table></figure><p><strong>【分析】 是是</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机 </category>
+          
+          <category> 刷题 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 模拟与暴力 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>python闭包</title>
       <link href="/posts/580a6a2d/"/>
       <url>/posts/580a6a2d/</url>
@@ -87,6 +141,33 @@
     
     
     <entry>
+      <title>你不知道的 python 十大语法特性</title>
+      <link href="/posts/cfa25748/"/>
+      <url>/posts/cfa25748/</url>
+      
+        <content type="html"><![CDATA[<h2 id="for-else"><a class="markdownIt-Anchor" href="#for-else"></a> for - else</h2><p>什么？不是 if 和 else 才是原配吗？No，你可能不知道，else 是个脚踩两只船的家伙，for 和 else 也是一对，而且是合法的。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]:</span><br><span class="line">print(i)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">print(i, <span class="string">'我是else'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line"><span class="comment"># 4 我是else</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机 </category>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 装饰器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>python 装饰器</title>
       <link href="/posts/cfa25748/"/>
       <url>/posts/cfa25748/</url>
@@ -118,7 +199,7 @@
       <link href="/posts/81203d65/"/>
       <url>/posts/81203d65/</url>
       
-        <content type="html"><![CDATA[<h2 id="如何工作"><a class="markdownIt-Anchor" href="#如何工作"></a> 如何工作</h2><h3 id="compiler"><a class="markdownIt-Anchor" href="#compiler"></a> compiler</h3><h3 id="linker"><a class="markdownIt-Anchor" href="#linker"></a> Linker</h3><h2 id="变量类型"><a class="markdownIt-Anchor" href="#变量类型"></a> 变量类型</h2><ul><li>char（1byte）</li><li>short（2byte）</li><li>int（4byte）</li><li>long（4byte）</li><li>long long（8byte）</li><li>float（4byte）</li><li>double（8byte）</li><li>bool（1byte）</li></ul><p>注：1 byte 等于 8 bits</p><h2 id="函数"><a class="markdownIt-Anchor" href="#函数"></a> 函数</h2><p>可能重复操作的功能性代码封装成函数。</p><h2 id="头文件"><a class="markdownIt-Anchor" href="#头文件"></a> 头文件</h2>]]></content>
+        <content type="html"><![CDATA[<h2 id="how-c-works"><a class="markdownIt-Anchor" href="#how-c-works"></a> How C++ Works</h2><h3 id="how-the-c-compiler-works"><a class="markdownIt-Anchor" href="#how-the-c-compiler-works"></a> How the C++ Compiler Works</h3><blockquote><p>c++ 编译器唯一要做的就是把源码变为中继格式 —— obj</p></blockquote><p>具体步骤：</p><ol><li>compiler 需要预处理（pre-process）代码</li><li>预处理后，进入标记解释（tokenizing）和解析（parsing）阶段</li><li>创建抽象语法树（abstract syntax tree）来进行代码表达</li></ol><p>当编译器创建了这颗抽象语法树后，就可以开始产生代码了，这个代码才是真正的cpu会执行的机器码，总之，编译器的工作就是把代码转换成常数资料（constant data）或者指令（instructions）。</p><h3 id="how-the-c-linker-works"><a class="markdownIt-Anchor" href="#how-the-c-linker-works"></a> How the C++ Linker Works</h3><blockquote><p>compiler 将每个c++源文件编译成独立的 obj 文件，linker将这些obj文件中的函数和符号链接在一起，形成可执行的二进制文件。</p></blockquote><hr /><h2 id="变量类型"><a class="markdownIt-Anchor" href="#变量类型"></a> 变量类型</h2><table><thead><tr><th style="text-align:center">类型</th><th style="text-align:center">占用字节</th></tr></thead><tbody><tr><td style="text-align:center">char</td><td style="text-align:center">1</td></tr><tr><td style="text-align:center">short</td><td style="text-align:center">2</td></tr><tr><td style="text-align:center">int</td><td style="text-align:center">4</td></tr><tr><td style="text-align:center">long</td><td style="text-align:center">4</td></tr><tr><td style="text-align:center">long long</td><td style="text-align:center">8</td></tr><tr><td style="text-align:center">float</td><td style="text-align:center">4</td></tr><tr><td style="text-align:center">double</td><td style="text-align:center">8</td></tr><tr><td style="text-align:center">bool</td><td style="text-align:center">1</td></tr></tbody></table><p>【注】1 byte 等于 8 bits</p><hr /><h2 id="头文件"><a class="markdownIt-Anchor" href="#头文件"></a> 头文件</h2><blockquote><p>在一个文件中创建函数，然后想要在另一个文件中使用时，如果不添加该函数的声明，编译器将无法识别。所以需要一个共同的地方来存放声明，而非定义（函数只能被定义一次），这个地方就是头文件，它的作用只是告诉编译器，“嘿，这个函数存在！”。</p></blockquote><h3 id="头文件保护符防止重复引用"><a class="markdownIt-Anchor" href="#头文件保护符防止重复引用"></a> 头文件保护符（防止重复引用）</h3><p>（1）</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> once</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"log.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br></pre></td></tr></table></figure><p>（2）</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _LOG_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _LOG_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"log.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure><h3 id="补充"><a class="markdownIt-Anchor" href="#补充"></a> 补充</h3><ol><li><code>#include</code>中尖括号只用于编译器指定环境变量中的路径，引号用于所有的路径，可以指定某个路径。</li><li>头文件带<code>.h</code>后缀一般是c标准库，不带<code>.h</code>的是cpp标准库。</li></ol><h2 id="指针"><a class="markdownIt-Anchor" href="#指针"></a> 指针</h2><blockquote><p>指针是一个整数，它存储着一个内存地址。</p></blockquote><hr /><h2 id="引用"><a class="markdownIt-Anchor" href="#引用"></a> 引用</h2><blockquote><p>引用是指对某个已存在的变量的引用（可看作别名），引用本身并不是一个新的变量，不占用内存。引用本质上是基于指针的一种高级修饰（一种特殊的指针），使得代码更易读更好学而已。</p></blockquote><p>引用传递改变原始变量值的两种写法：</p><p>（1）指针版</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LOG(x) std::cout &lt;&lt; x &lt;&lt; std::endl</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">increment</span><span class="params">(<span class="keyword">int</span>* value)</span></span>&#123;  <span class="comment">// 参数为指针</span></span><br><span class="line">    (*value)++; <span class="comment">// 解引用得到该内存地址对应的值，做自增</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">5</span>;</span><br><span class="line">    increment(&amp;a);  <span class="comment">// 取a的内存地址</span></span><br><span class="line">    LOG(a);  <span class="comment">// a自增后，输出为6</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>（2）引用版</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LOG(x) std::cout &lt;&lt; x &lt;&lt; std::endl</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">increment</span><span class="params">(<span class="keyword">int</span>&amp; value)</span></span>&#123;</span><br><span class="line">    value++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">5</span>;</span><br><span class="line">    increment(a);</span><br><span class="line">    LOG(a);  <span class="comment">// a自增后，输出为6</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr /><h2 id="类与结构体"><a class="markdownIt-Anchor" href="#类与结构体"></a> 类与结构体</h2><ul><li>class 代码块内部如果不加访问修饰符，默认是私有的。</li><li>struct 代码块内部如果不加访问修饰符，默认是公有的。</li></ul><p>struct 与 class 的区别仅限于此，struct 存在的原因是 c++ 要与 c 保持兼容性，而 c 中没有 class。</p>]]></content>
       
       
       <categories>
@@ -402,9 +483,9 @@
       
         <tags>
             
-            <tag> 模型评估 </tag>
-            
             <tag> 读书笔记 </tag>
+            
+            <tag> 模型评估 </tag>
             
         </tags>
       
@@ -431,8 +512,6 @@
       
         <tags>
             
-            <tag> 读书笔记 </tag>
-            
             <tag> 特征工程 </tag>
             
             <tag> PLSA </tag>
@@ -442,6 +521,8 @@
             <tag> N-gram </tag>
             
             <tag> word2vec </tag>
+            
+            <tag> 读书笔记 </tag>
             
         </tags>
       
